@@ -1,13 +1,5 @@
 'use client';
 
-/**
- * ===================================================================
- * FINANCE INTELLIGENCE DASHBOARD - Professional UI Component
- * ===================================================================
- * Real-time financial intelligence display with automated insights
- * Built with: React 19, Tailwind CSS 4, Radix UI, Recharts
- * ===================================================================
- */
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
