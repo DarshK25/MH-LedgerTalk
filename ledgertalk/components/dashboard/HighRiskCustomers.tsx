@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-// High risk customers component
-export function HighRiskCustomers() {
-    return (
-        <div className="space-y-4">
-            <h3 className="text-lg font-medium">High Risk Customers</h3>
-            {/* TODO: Implement high risk customers list */}
-        </div>
-    );
-=======
 "use client";
 
 import { useState, useEffect } from "react";
@@ -137,5 +127,4 @@ export function HighRiskCustomers({ businessId }: { businessId: number }) {
       </CardContent>
     </Card>
   );
->>>>>>> main
 }

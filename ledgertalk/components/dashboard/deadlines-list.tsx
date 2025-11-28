@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-// Deadlines list component
-export function DeadlinesList() {
-    return (
-        <div className="space-y-4">
-            <h3 className="text-lg font-medium">Upcoming Deadlines</h3>
-            {/* TODO: Implement deadlines list */}
-        </div>
-    );
-=======
 'use client';
 
 import { Calendar, AlertCircle } from 'lucide-react';
@@ -69,5 +59,4 @@ export function DeadlinesList({ deadlines }: DeadlinesListProps) {
       ))}
     </div>
   );
->>>>>>> main
 }

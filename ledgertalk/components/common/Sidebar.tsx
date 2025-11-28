@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-// Common Sidebar component
-export function Sidebar() {
-    return (
-        <aside className="w-64 border-r">
-            <nav className="space-y-2 p-4">
-                {/* TODO: Add navigation items */}
-            </nav>
-        </aside>
-    );
-}
-=======
 'use client';
 
 import React from 'react';
@@ -112,4 +100,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, isOpen, onClose }) => {
 };
 
 export default Sidebar;
->>>>>>> main
