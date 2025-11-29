@@ -136,15 +136,14 @@ export function OrchestratorChat({ businessId = 1 }: { businessId?: number }) {
 
       // Speak response with enhanced TTS
       if (isTTSSupported) {
-        speak(responseContent, () => {
-            // Auto-restart listening if hands-free mode is active (simple check for now: if we were listening before)
-            // Ideally we'd have a toggle, but for now let's assume if they used voice, they want to continue
-            if (isSpeechSupported) {
-                setTimeout(() => {
-                    startListening();
-                }, 500);
-            }
-        });
+        speak(responseContent);
+        // Auto-restart listening if hands-free mode is active (simple check for now: if we were listening before)
+        // Ideally we'd have a toggle, but for now let's assume if they used voice, they want to continue
+        if (isSpeechSupported) {
+          setTimeout(() => {
+            startListening();
+          }, 500);
+        }
       }
     } catch (error) {
       console.error(error);

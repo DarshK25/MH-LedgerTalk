@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 export function Navbar() {
   return (
@@ -31,20 +32,49 @@ export function Navbar() {
               Why Choose Us
             </Link>
             <ThemeToggle />
-            <Link href="/dashboard">
-              <Button size="sm" className="font-semibold">
-                Get Started
-              </Button>
-            </Link>
+            
+            <SignedOut>
+              <Link href="/sign-in">
+                <Button variant="ghost" size="sm" className="font-semibold">
+                  Sign In
+                </Button>
+              </Link>
+              <Link href="/sign-up">
+                <Button size="sm" className="font-semibold">
+                  Get Started
+                </Button>
+              </Link>
+            </SignedOut>
+            
+            <SignedIn>
+              <Link href="/dashboard">
+                <Button size="sm" className="font-semibold">
+                  Dashboard
+                </Button>
+              </Link>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
-            <Link href="/dashboard">
-              <Button size="sm">
-                Dashboard
-              </Button>
-            </Link>
+            
+            <SignedOut>
+              <Link href="/sign-in">
+                <Button size="sm">
+                  Sign In
+                </Button>
+              </Link>
+            </SignedOut>
+            
+            <SignedIn>
+              <Link href="/dashboard">
+                <Button size="sm">
+                  Dashboard
+                </Button>
+              </Link>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         </div>
       </div>
